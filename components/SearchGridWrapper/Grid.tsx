@@ -1,16 +1,10 @@
 'use client';
 
 import { useBooks } from '@/hooks/booksQueryHook';
-import { useDebounce } from '@/hooks/debounceHook';
-import { useEffect, useState } from 'react';
-import Card from './Card';
+import Card from '../Card';
 
-export default function Grid() {
-  //const [inputValue, setInputValue] = useState('');
-  //const debouncedQuery = useDebounce(inputValue, 1000);
-  //const finalQuery = debouncedQuery.trim() || 'bestseller'; // fallback if empty
-
-  const { data, isLoading, error } = useBooks('bestseller'); // for test purposes
+export default function Grid({ searchInput }) {
+  const { data, isLoading, error } = useBooks(searchInput); // for test purposes
 
   return (
     <>
