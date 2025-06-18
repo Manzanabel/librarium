@@ -10,7 +10,7 @@ export default function Grid({ searchInput }) {
     <>
       {isLoading && <p>Loading...</p>}
       {data && (
-        <div className="grid grid-cols-4 gap-4 place-items-center">
+        <div className="grid grid-cols-6 gap-4 place-items-center">
           {data.docs.map((book) => (
             <Card
               key={book.key}
